@@ -11,7 +11,6 @@ router.post('/api/login', async function (req, res, next){
   var password = req.body.password;
 
   if (!identifiant || !password){
-    console.log('CURL PARAM', identifiant, password);
     res.status(400).json({erreur : "identifiant ou password introuvable(s)."});
   }
   

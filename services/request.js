@@ -17,6 +17,23 @@ async function authenticateUser(identifiant, password){
   }
 }
 
+async function getTrials(){
+  
+  try {
+
+    const [rows] = await db.query(
+      `SELECT name FROM epreuve`
+    );
+
+    return rows;
+
+  } catch (err) {
+    console.error('Sorry, try later.', err);
+    throw err;
+  }
+}
+
 module.exports = {
-  authenticateUser
+  authenticateUser,
+  getTrials
 }

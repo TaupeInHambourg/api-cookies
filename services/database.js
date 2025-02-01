@@ -1,5 +1,4 @@
 const mysql = require('mysql2/promise');
-// require('dotenv').config(); // Charger les variables d'environnement
 
 async function query(sql, params) {
   const connection = await mysql.createConnection({
