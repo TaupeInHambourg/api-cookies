@@ -55,10 +55,35 @@ curl localhost:3306/api
 | Permet à l'utilisateur de se connecter | `/login` | GET, POST, HEAD, OPTION | `{ identifiant, password }` | |
 ## 📝 TODO List
 - [ ] Vérifier /login
-- [ ] Créer les ressources :
-  - [ ] Gallery
-  - [ ] Note
-  - [ ] Juré
-  - [ ] Concurrent
-- [ ] Ajouter les ressources au tableau
+- [ ] Modifier les ressources en hypermédia (avec HAL)
+      
+- [x] Créer la fonction auth
+  - [ ] Protéger auth avec JWT
 - [ ] Protéger les ressources
+           
+- [ ] Créer les ressources (noms bancals -> tout mettre en anglais) :
+   - [ ] /notes
+     - [ ] POST Créer la fonction addNote
+     - [ ] GET Créer la fonction getNotes
+     - [ ] GET Créer la fonction getNotesByJure
+     - [ ] GET Créer la fonction getNotesByConcurrent
+   - [ ] /trials
+     - [ ] POST Créer la fonction addTrial
+     - [ ] DELETE Créer la fonction deleteTrial
+     - [x] GET Créer la fonction getTrials
+     - [ ] /trials/{:name}
+        - [ ] GET Créer la fonction getTrialById
+   - [ ] /jure
+     - [ ] POST Créer la fonction addJure
+     - [ ] DELETE Créer la fonction deleteJure
+     - [x] GET Créer la fonction getJure
+     - [ ] /jure/{:name}
+        - [ ] GET Créer la fonction getJureById
+   - [ ] /concurrent
+     - [ ] POST Créer la fonction addConcurrent
+     - [ ] DELETE Créer la fonction deleteConcurrent
+     - [x] GET Créer la fonction getConcurrent
+     - [ ] /concurrent/{:name}
+        - [ ] GET Créer la fonction getConcurrentById
+           
+- [ ] Ajouter les ressources au tableau
