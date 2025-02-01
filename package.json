@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "npm install; node server.js",
-    "postinstall": "npm install"
+    "start": "npm install",
+    "postinstall": "node server.js"
   },
   "dependencies": {
     "express": "^4.21.2",
